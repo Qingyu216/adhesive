@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>怀来立智材料科技有限责任公司</title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BYFX9bzVdsEWL72n800id9nYeSVW9c13"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <style type="text/css">
+        .contact_index {
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .contact_index_content {
+            overflow: hidden;
+            padding: 20px 50px;
+            border-top: 1px solid #D3D3D3;
+        }
+
+        #allmap {
+            width: 900px;
+            height: 600px;
+            overflow: hidden;
+            margin: 50px auto;
+            font-family: "微软雅黑";
+        }
+        .contact_way {
+            overflow: hidden;
+            padding: 0 200px;
+        }
+        .contact_way>div {
+            float: left;
+            width: 200.5px;
+            text-align: center;
+            color: #898A8A;
+            font-family: '微软雅黑';
+        }
+        .QQ_way,
+        .wecat_way,
+        .tell_way {
+            margin-right: 66px;
+        }
+        .contact_way p {
+            text-align: center;
+        }
+        .QQ_way .QQ_way_one,
+        .tell_way p {
+            margin-top: 30px;
+        }
+        .addr_way p{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="header">
+            <div class="header_left">
+                <p class="header_left_pOne">怀来立智材料科技</p>
+                <p class="header_left_pTwo">有限责任公司</p>
+            </div>
+            <div class="header_right">
+                <img src="../images/tell.png">
+                <span>15830309759</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="navigation_bar">
+                <ul>
+                    <a href="../index.html">
+                        <li>首页</li>
+                    </a>
+                    <a href="../aboutUs/index.html">
+                        <li>关于我们</li>
+                    </a>
+                    <a href="../product/index.html">
+                        <li>系列产品</li>
+                    </a>
+                    <a href="../industry/index.html">
+                        <li>行业资讯</li>
+                    </a>
+                    <a href="../news/index.html">
+                        <li>研发中心</li>
+                    </a>
+                    <a href="../contact/index.html">
+                        <li class="list_select">联系我们</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="contact_index">
+                <p class="company_philosophy">立足客户，精益求精，诚实守信，互利共赢</p>
+                <div id="allmap"></div>
+                <div class="contact_way">
+                    <div class="QQ_way">
+                        <img src="../images/6-1.png">
+                        <p class="QQ_way_one">475951632</p>
+                        <p>1594485756</p>
+                    </div>
+                    <div class="wecat_way">
+                        <img src="../images/6-2.png">
+                        <p>
+                            <img src="../images/wecat.png">
+                        </p>
+                    </div>
+                    <div class="tell_way">
+                        <img src="../images/6-3.png">
+                        <p>15830309759</p>
+                    </div>
+                    <div class="addr_way">
+                        <img src="../images/6-4.png">
+                        <p>河北省张家口市怀来县沙城镇新东方城市广场3号商业楼07号2楼203</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>版权所有 Copyright (C) 2015-2016怀来立智材料科技有限公司</p>
+        </div>
+    </div>
+    <script src="../js/public.js"></script>
+</body>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(115.525926, 40.409761);
+    map.centerAndZoom(point, 13);
+    map.enableScrollWheelZoom(); //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom(); //启用地图惯性拖拽，默认禁用
+
+    //默认缩放比例控件
+    var top_left_navigation = new BMap.NavigationControl();
+    map.addControl(top_left_navigation);
+
+    var marker = new BMap.Marker(point); // 创建点
+    map.addOverlay(marker); //增加点
+
+    var opts = {
+        width: 200, // 信息窗口宽度
+        height: 100, // 信息窗口高度
+        title: "立智材料科技：", // 信息窗口标题
+        enableMessage: true, //设置允许信息窗发送短息
+    }
+    var infoWindow = new BMap.InfoWindow("河北省张家口市怀来县沙城镇新东方城市广场3号商业楼07号二楼203", opts); // 创建信息窗口对象 
+    marker.addEventListener("click", function() {
+        map.openInfoWindow(infoWindow, point); //开启信息窗口
+    });
+</script>
+
+</html>

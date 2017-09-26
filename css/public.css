@@ -1,0 +1,109 @@
+/*头部*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.wraper {
+    margin: 0 auto;
+    width: 1400px;
+    min-width: 1400px;
+}
+
+.header {
+    overflow: hidden;
+    padding: 20px 30px;
+}
+
+.header_left {
+    float: left;
+    width: 350px;
+}
+
+.header_left p {
+    line-height: 50px;
+    font-size: 36px;
+    font-family: cursive;
+}
+
+.header_left_pOne {
+    color: #7FC1F6;
+}
+
+.header_left_pTwo {
+    color: #848484;
+}
+
+.header_right {
+    width: auto;
+    float: right;
+    margin-top: 70px;
+}
+
+.header_right img {
+    float: left;
+    width: 80px;
+}
+
+.header_right span {
+    line-height: 70px;
+    color: #80C1F6;
+    font-family: '微软雅黑';
+    font-size: 30px;
+}
+
+/*内容部分*/
+
+.content {
+    overflow: hidden;
+}
+
+.navigation_bar {
+    height: 45px;
+    background: #000;
+    overflow: hidden;
+}
+
+.navigation_bar ul {
+    margin: 0 30px;
+}
+
+.navigation_bar ul li {
+    width: 115px;
+    float: left;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+}
+
+.navigation_bar .list_select {
+    background: #80C2F6;
+}
+
+.company_philosophy {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-family: monospace;
+    color: #80C1F6;
+    font-weight: bold;
+}
+
+/*脚部*/
+
+.footer {
+    height: 46px;
+    background: #232323;
+}
+
+.footer p {
+    text-align: center;
+    line-height: 46px;
+    color: #838383;
+    font-size: 14px;
+}
